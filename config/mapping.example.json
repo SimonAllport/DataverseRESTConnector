@@ -1,0 +1,44 @@
+{
+  "baseUrl": "https://api.example.com/v1",
+  "timeoutSeconds": 30,
+  "auth": {
+    "type": "apiKey",
+    "headerName": "X-Api-Key",
+    "apiKey": "REPLACE-ME"
+  },
+  "tables": {
+    "rvtp_customer": {
+      "listPath": "/customers",
+      "getPath": "/customers/{id}",
+      "itemsPath": "data",
+      "keyField": "id",
+      "keyKind": "int",
+      "primaryIdAttribute": "rvtp_customerid",
+      "columns": {
+        "rvtp_name":      { "sourcePath": "name",         "type": "string" },
+        "rvtp_email":     { "sourcePath": "contact.email","type": "string" },
+        "rvtp_city":      { "sourcePath": "address.city", "type": "string" },
+        "rvtp_active":    { "sourcePath": "isActive",     "type": "bool" },
+        "rvtp_balance":   { "sourcePath": "balance",      "type": "money" },
+        "rvtp_createdon": { "sourcePath": "createdAt",    "type": "datetime" }
+      },
+      "filterParams": {
+        "rvtp_city":   "city",
+        "rvtp_active": "active"
+      },
+      "paging": {
+        "mode": "pageNumber",
+        "pageParam": "page",
+        "sizeParam": "pageSize",
+        "maxPageSize": 100
+      },
+      "sortFields": {
+        "rvtp_name": "name",
+        "rvtp_createdon": "createdAt"
+      },
+      "sortParam": "sort",
+      "sortDescPrefix": "-",
+      "strictSort": false
+    }
+  }
+}

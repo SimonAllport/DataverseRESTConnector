@@ -1,0 +1,58 @@
+{
+  "baseUrl": "https://jsonplaceholder.typicode.com",
+  "timeoutSeconds": 30,
+  "auth": {
+    "type": "none"
+  },
+  "tables": {
+    "rvtp_comment": {
+      "listPath": "/comments",
+      "getPath": "/comments/{id}",
+      "itemsPath": "",
+      "keyField": "id",
+      "keyKind": "int",
+      "primaryIdAttribute": "rvtp_commentid",
+      "columns": {
+        "rvtp_postid": { "sourcePath": "postId", "type": "int" },
+        "rvtp_name":   { "sourcePath": "name",   "type": "string" },
+        "rvtp_email":  { "sourcePath": "email",  "type": "string" },
+        "rvtp_body":   { "sourcePath": "body",   "type": "string" }
+      },
+      "filterParams": {
+        "rvtp_postid": "postId"
+      },
+      "paging": {
+        "mode": "pageNumber",
+        "pageParam": "_page",
+        "sizeParam": "_limit",
+        "maxPageSize": 100
+      },
+      "sortFields": {},
+      "strictSort": false
+    },
+    "rvtp_post": {
+      "listPath": "/posts",
+      "getPath": "/posts/{id}",
+      "itemsPath": "",
+      "keyField": "id",
+      "keyKind": "int",
+      "primaryIdAttribute": "rvtp_postid",
+      "columns": {
+        "rvtp_userid": { "sourcePath": "userId", "type": "int" },
+        "rvtp_title":  { "sourcePath": "title",  "type": "string" },
+        "rvtp_body":   { "sourcePath": "body",   "type": "string" }
+      },
+      "filterParams": {
+        "rvtp_userid": "userId"
+      },
+      "paging": {
+        "mode": "pageNumber",
+        "pageParam": "_page",
+        "sizeParam": "_limit",
+        "maxPageSize": 100
+      },
+      "sortFields": {},
+      "strictSort": false
+    }
+  }
+}

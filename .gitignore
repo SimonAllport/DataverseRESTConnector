@@ -1,0 +1,24 @@
+# Build output
+bin/
+obj/
+*.nupkg
+*.user
+*.suo
+.vs/
+
+# Strong-name signing key. Deliberately not published: it is a private key and
+# it is the assembly's identity. Generate your own before building:
+#   sn -k src/RestVtp.Plugins/RestVtp.snk
+*.snk
+
+# Local assistant / editor configuration
+.claude/
+CLAUDE.md
+
+# Environment-specific mapping configs. These carry real base URLs and, in v1,
+# real credentials, so they stay local. config/mapping.example.json is the
+# reference shape, and the jsonplaceholder/httpbin ones are public-API samples.
+config/mapping.*.json
+!config/mapping.example.json
+!config/mapping.jsonplaceholder.json
+!config/mapping.httpbin.json

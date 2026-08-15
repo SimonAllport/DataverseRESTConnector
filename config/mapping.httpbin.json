@@ -1,0 +1,44 @@
+{
+  "baseUrl": "https://httpbin.org",
+  "auth": { "type": "none" },
+  "timeoutSeconds": 30,
+  "headers": { "X-Rvtp-Test": "hello" },
+  "tables": {
+    "rvtp_echo": {
+      "listPath": "/post",
+      "method": "POST",
+      "itemsPath": "json.items",
+      "body": {
+        "items": [
+          { "id": 1, "name": "Alpha" },
+          { "id": 2, "name": "Beta" }
+        ]
+      },
+      "keyField": "id",
+      "keyKind": "int",
+      "primaryIdAttribute": "rvtp_echoid",
+      "columns": {
+        "rvtp_name": { "sourcePath": "name", "type": "string" }
+      },
+      "filterParams": {},
+      "paging": { "mode": "none", "maxPageSize": 50 },
+      "sortFields": {},
+      "strictSort": false
+    },
+    "rvtp_bearer": {
+      "listPath": "/bearer",
+      "itemsPath": "",
+      "keyField": "token",
+      "keyKind": "string",
+      "primaryIdAttribute": "rvtp_bearerid",
+      "headers": { "Authorization": "Bearer abc123" },
+      "columns": {
+        "rvtp_name": { "sourcePath": "token", "type": "string" }
+      },
+      "filterParams": {},
+      "paging": { "mode": "none", "maxPageSize": 50 },
+      "sortFields": {},
+      "strictSort": false
+    }
+  }
+}
