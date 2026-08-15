@@ -139,3 +139,8 @@ Two test loops it enables:
 - Secrets out of mapping JSON → environment variables / managed identity.
 - Write support (Create/Update/Delete plug-ins).
 - FakeXrmEasy test harness for QueryTranslator (pure unit-testable already).
+
+## Licence
+
+[MIT](LICENSE). Use it for anything, commercially or otherwise; keep the
+copyright notice, and understand it comes with no warranty.
