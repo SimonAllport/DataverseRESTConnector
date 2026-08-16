@@ -1,1 +1,0 @@
-Solution placeholder: run `dotnet new sln -n RestVtp && dotnet sln add src/RestVtp.Plugins tools/SwaggerForge` locally.

@@ -6,6 +6,11 @@ obj/
 *.suo
 .vs/
 
+# Solution files are generated locally, not committed. The two projects build
+# independently; create one if your IDE wants it:
+#   dotnet new sln -n RestVtp && dotnet sln add src/RestVtp.Plugins tools/SwaggerForge
+*.sln
+
 # Strong-name signing key. Deliberately not published: it is a private key and
 # it is the assembly's identity. Generate your own before building:
 #   sn -k src/RestVtp.Plugins/RestVtp.snk
